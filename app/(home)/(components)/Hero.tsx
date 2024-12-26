@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { SignInButton } from "@clerk/nextjs";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
@@ -13,10 +14,18 @@ const Hero = () => {
           your lifestyle and schedule perfectly!
         </p>
         <div className="flex justify-center items-center lg:gap-x-12 font-tartuffo text-black lg:text-lg mt-6">
-          <Button className="border-2 border-black flex items-center gap-x-2 hover:gap-x-3 transition">
-            Get BarberIQ Free <ArrowRight />
-          </Button>
-          <Button className="bg-transparent hover:bg-transparent text-black duration-300 border-2 border-black">
+          <SignInButton mode="modal">
+            <Button
+              size="lg"
+              className="border-2 border-black hover:bg-transparent hover:text-black duration-300 hover:shadow-md"
+            >
+              Get BarberIQ Free <ArrowRight />
+            </Button>
+          </SignInButton>
+          <Button
+            size="lg"
+            className="bg-transparent hover:bg-transparent text-black duration-300 border-2 border-black"
+          >
             Need Help?
           </Button>
         </div>

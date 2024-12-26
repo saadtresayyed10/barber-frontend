@@ -1,4 +1,4 @@
-import { SignInButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { LogIn } from "lucide-react";
 import Link from "next/link";
 
@@ -36,11 +36,16 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <SignInButton mode="modal">
-          <button className="flex items-center gap-x-2 hover:gap-x-3 text-white bg-neutral-800 rounded-lg px-6 py-1.5 cursor-pointer hover:text-black hover:bg-transparent border-2 border-black duration-300">
-            Login <LogIn className="w-4 h-4" />
-          </button>
-        </SignInButton>
+        <SignedOut>
+          <SignInButton mode="modal">
+            <button className="flex items-center gap-x-2 hover:gap-x-3 text-white bg-neutral-800 rounded-lg px-6 py-1.5 cursor-pointer hover:text-black hover:bg-transparent border-2 border-black duration-300">
+              Login <LogIn className="w-4 h-4" />
+            </button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </div>
   );

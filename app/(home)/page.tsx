@@ -1,9 +1,16 @@
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Hero from "./(components)/Hero";
+import LoggedHero from "./(components)/LoggedHero";
 
 const HomePage = () => {
   return (
     <div className="flex justify-center items-center w-full">
-      <Hero />
+      <SignedOut>
+        <Hero />
+      </SignedOut>
+      <SignedIn>
+        <LoggedHero />
+      </SignedIn>
     </div>
   );
 };
