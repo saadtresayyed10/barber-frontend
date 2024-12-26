@@ -19,7 +19,7 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center w-full lg:px-10 lg:py-4 bg-gradient-to-r from-violet-50 to-pink-200">
+    <div className="flex justify-between items-center w-full lg:px-10 lg:py-4 bg-gradient-to-r from-blue-50 to-pink-200 text-black">
       <Link href="/">
         <h1 className="font-roobert font-bold lg:text-3xl tracking-wide">
           BarberIQ
@@ -37,8 +37,8 @@ const Navbar = () => {
         </ul>
 
         <SignInButton mode="modal">
-          <button className="flex items-center gap-x-2 hover:gap-x-4 text-white bg-neutral-800 rounded-lg px-6 py-1.5 cursor-pointer hover:text-black hover:bg-transparent border-2 border-black duration-300">
-            <LogIn className="w-4 h-4" /> Login
+          <button className="flex items-center gap-x-2 hover:gap-x-3 text-white bg-neutral-800 rounded-lg px-6 py-1.5 cursor-pointer hover:text-black hover:bg-transparent border-2 border-black duration-300">
+            Login <LogIn className="w-4 h-4" />
           </button>
         </SignInButton>
       </div>
